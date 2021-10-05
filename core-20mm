@@ -1,0 +1,44 @@
+% --- Heterogeneous 2D molten salt reactor geometry
+
+/************************
+ * Material definitions *
+ ************************/
+
+% --- Fuel
+
+mat fuel   -3.35 tmp 900
+3007.09c   28.351127    % Mass fraction of Li-7 
+9019.09c   60.458679   % Mass fraction of F-19
+4009.09c    6.326611    % Mass fraction of Be-9
+90232.09c   4.744959   % Mass fraction of Th-232
+92233.09c   0.118624  % Mass fraction of U-233 (0.3% mole)
+
+% --- Moderator
+
+mat graphite   -1.84 tmp 900 moder gr 6000
+6000.09c   -1.0
+
+% --- Thermal scattering data for graphite
+
+therm gr 900 gr05.32t gr06.32t
+
+% --- Cross section data library file path
+
+set acelib "/projects/sciteam/bbcc/serpent/xsdata/jeff312/sss_jeff312.xsdata"
+
+% --- Boundary condition
+
+set bc 2
+
+% --- Surfaces
+
+surf s1 sqc 0.0 0.0 5.0
+surf s2 cyl 0.0 0.0 2.0
+
+cell c1 0 fuel -s2
+cell c2 0 graphite -s1 s2
+cell c3 0 outside s1
+
+% --- Neutron population
+
+set pop 10000 100 20
