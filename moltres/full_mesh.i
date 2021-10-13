@@ -1,11 +1,36 @@
 [Mesh]
+  [./concentric_circle]
+    type = ConcentricCircleMeshGenerator
+    num_sectors = 2
+    radii = '1.7'
+    rings = '1 1'
+    has_outer_square = on
+    pitch = 10
+    preserve_volumes = off
+    smoothing_max_it = 3
+  [../]
   [./fuel_channel]
-    type = FileMeshGenerator
-    file = fuel_channel.e
+    type = RenameBlockGenerator
+    input = concentric_circle
+    old_block_id = '1 2'
+    new_block_name = 'fuel mod'
+  []
+
+  [./generated_mesh]
+    type = GeneratedMeshGenerator
+    dim = 2
+    nx = 10
+    ny = 10
+    xmin = -5.0
+    xmax = 5.0
+    ymin = -5.0
+    ymax = 5.0
   []
   [./square]
-    type = FileMeshGenerator
-    file = square.e
+    type = RenameBoundaryGenerator
+    input = generated_mesh
+    old_boundary = '0 1 2 3'
+    new_boundary = '2 3 4 1'
   []
 
   [./full_mesh]
