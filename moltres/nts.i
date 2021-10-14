@@ -1,5 +1,3 @@
-# Step 0.2: Neutronics input file
-
 [GlobalParams]
   num_groups = 4
   num_precursor_groups = 8
@@ -93,18 +91,18 @@
 
   xdiff = 'group1diff'
   bx_norm = 'bnorm'
-  k0 = 1.2
+  k0 = 1.16
   l_max_its = 100
   eig_check_tol = 1e-7
 
   solve_type = 'NEWTON'
   petsc_options = '-snes_converged_reason -ksp_converged_reason -snes_linesearch_monitor'
-  petsc_options_iname = '-pc_type -pc_factor_shift_type -pc_factor_mat_solver_package'
-  petsc_options_value = 'lu       NONZERO               superlu_dist'
+#  petsc_options_iname = '-pc_type -pc_factor_shift_type -pc_factor_mat_solver_package'
+#  petsc_options_value = 'lu       NONZERO               superlu_dist'
 
 ## Use the settings below instead if running on a desktop/small cluster
-#  petsc_options_iname = '-pc_type -sub_pc_type -ksp_gmres_restart -pc_asm_overlap -sub_pc_factor_shift_type'
-#  petsc_options_value = 'asm      lu           200                1               NONZERO'
+  petsc_options_iname = '-pc_type -sub_pc_type -ksp_gmres_restart -sub_pc_factor_shift_type'
+  petsc_options_value = 'gasm      lu           200               NONZERO'
 
   line_search = none
 []
