@@ -68,7 +68,7 @@ lat lat1 1 0.0 0.0 16 16 10.0
 
 % --- Neutron population
 
-set pop 25000 100 20
+set pop 100000 100 20
 
 % --- Normalization
 
