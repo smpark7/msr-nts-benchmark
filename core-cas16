@@ -1,0 +1,86 @@
+% --- Heterogeneous 2D molten salt reactor geometry
+
+/************************
+ * Material definitions *
+ ************************/
+
+% --- Fuel
+
+mat fuel   -3.35 tmp 900
+3007.09c   28.351127    % Mass fraction of Li-7 
+9019.09c   60.458679   % Mass fraction of F-19
+4009.09c    6.326611    % Mass fraction of Be-9
+90232.09c   4.744959   % Mass fraction of Th-232
+92233.09c   0.118624  % Mass fraction of U-233 (0.3% mole)
+
+% --- Moderator
+
+mat graphite   -1.84 tmp 900 moder gr 6000
+6000.09c   -1.0
+
+% --- Thermal scattering data for graphite
+
+therm gr 900 gr05.32t gr06.32t
+
+% --- Cross section data library file path
+
+set acelib "/projects/sciteam/bbcc/serpent/xsdata/jeff312/sss_jeff312.xsdata"
+
+% --- Boundary condition
+
+set bc 1
+
+% --- Surfaces
+
+surf s0 inf
+surf s1 cyl 0.0 0.0 1.7
+surf s2 sqc 0.0 0.0 80.0
+surf s3 sqc 0.0 0.0 160.0
+
+cell m1 2 fuel -s0
+cell m2 3 graphite -s0
+cell m3 4 graphite -s0
+
+cell c1 1 fill 2 -s1
+cell c2 1 fill 3 s1
+
+cell c3 0 fill lat1 -s2
+cell c4 0 fill 4 s2 -s3
+cell c5 0 outside s3
+
+lat lat1 1 0.0 0.0 16 16 10.0
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+% --- Neutron population
+
+set pop 25000 100 20
+
+% --- Group constant generation
+
+set nfg cas16
+set gcu 2 3 4
+
+% --- Normalization
+
+set fissrate 1e12
+
+% --- Detector
+
+det d1 dr -6 void dx -80.0 80.0 800 dy -80.0 80.0 800
+det d2 dx -160.0 160.0 800 dy -160.0 160.0 800
+
