@@ -1,0 +1,17 @@
+[TITLE]
+  msr_XS_homogenized.json
+
+[MAT]
+  2
+  fuel reflector
+
+[BRANCH]
+  4
+  fuel       900 1 1 1 1
+  fuel       901 1 1 1 1
+  reflector  900 1 1 2 1
+  reflector  901 1 1 2 1
+
+[FILES]
+  1
+  core-homogenized_res.m   serpent
