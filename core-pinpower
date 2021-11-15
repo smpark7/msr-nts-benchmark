@@ -70,6 +70,11 @@ lat lat1 1 0.0 0.0 16 16 10.0
 
 set pop 100000 100 20
 
+% --- Group constant generation
+
+set nfg cas12
+set gcu 2 3 4
+
 % --- Normalization
 
 set power 2.56e5	% Linear power: 256 kW/cm -> 1 kW/cm per fuel channel
