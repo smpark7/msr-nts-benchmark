@@ -41,3 +41,11 @@ with open("power_postprocessor.i", "w") as f:
             f.write("    type = ElmIntegTotFissHeatPostprocessor\n")
             f.write("    block = 'fuel" + i_s + j_s + "'\n")
             f.write("  []\n")
+
+block = ""
+for i in range(1,9):
+    for j in range(1,9):
+        if j < i:
+            continue
+        block += " fuel" + str(i) + str(j)
+print(block)
