@@ -1,5 +1,5 @@
 [TITLE]
-  msr_XS.json
+  msr_XS_cas16.json
 
 [MAT]
   3
@@ -16,4 +16,4 @@
 
 [FILES]
   1
-  core_res.m   serpent
+  core-cas16_res.m   serpent

@@ -1,0 +1,1323 @@
+
+
+[33m
+*** Warning, This code is deprecated and will be removed in future versions:
+'InversePowerMethod' executioner is deprecated in favor of 'Eigenvalue' executioner.
+Few parameters such as 'bx_norm', 'k0', 'xdiff', 'max_power_iterations', 'min_power_iterations', 'eig_check_tol', 'sol_check_tol', and 'output_before_normalization' are no longer supported.
+However, 'Eigenvalue' executioner supports more solving options by interfacing SLEPc.
+[39m
+
+                                                                               [[33m  7.58 s[39m] [[33m   44 MB[39m]
+Framework Information:
+MOOSE Version:           git commit 0d650f19e1 on 2021-09-10
+LibMesh Version:         ffab5c914090ad625645faa1bb4251d6b46f1c26
+PETSc Version:           3.9.3
+Current Time:            Wed Oct 13 19:34:55 2021
+Executable Timestamp:    Wed Oct 13 19:34:25 2021
+
+Parallelism:
+  Num Processors:          32
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   
+    Total:                 27457
+    Local:                 884
+    Min/Max/Avg:           790/931/858
+  Elems:                   
+    Total:                 27136
+    Local:                 829
+    Min/Max/Avg:           829/862/848
+  Num Subdomains:          3
+  Num Partitions:          32
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                140548
+  Num Local DOFs:          6416
+  Variables:               { "group1" "group2" "group3" "group4" } { "pre1" "pre2" "pre3" "pre4" "pre5" 
+                             "pre6" "pre7" "pre8" } 
+  Finite Element Types:    "LAGRANGE" "MONOMIAL" 
+  Approximation Orders:    "FIRST" "CONSTANT" 
+
+Execution Information:
+  Executioner:             InversePowerMethod
+  Solver Mode:             NEWTON
+  MOOSE Preconditioner:    SMP
+
+[31mLEGACY MODES ENABLED:[39m
+ This application uses the legacy material output option: material properties are output only on TIMESTEP_END, not INITIAL. To remove this message, set 'use_legacy_material_output' to false in this application. If there are gold output files that contain material property output for which output occurs on INITIAL, then these will generate diffs due to zero values being stored, and these tests should be re-golded.
+[39m
+
+|Bx| = 1.1600000000
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+| time           | bnorm          | group1diff     | group1max      | group1norm     | group2diff     | group2max      | group2norm     | powernorm      | tot_fissions   |
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   1.160000e+00 |   4.115938e+00 |   0.000000e+00 |   6.585501e+02 |   4.115938e+00 |   0.000000e+00 |   6.585501e+02 |   1.486357e-11 |   4.662402e-01 |
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+
+
+Reporter Values:
++----------------+------------------------+
+| time           | Executioner/eigenvalue |
++----------------+------------------------+
+|   0.000000e+00 |           1.160000e+00 |
++----------------+------------------------+
+
+
+[33m
+*** Warning ***
+/mnt/a/u/sciteam/park2/msr-nts-benchmark/moltres/nts.i:28: unused parameter 'Nt/transient'
+[39m
+
+ Power iterations starts
+ ________________________________________________________________________________ 
+ Power iteration= 0
+ 0 Nonlinear |R| = [32m4.853429e-01[39m
+    |residual|_2 of individual variables:
+                     group1: 0.268581
+                     group2: 0.235799
+                     group3: 0.230474
+                     group4: 0.233886
+                     pre1:   4.19586e-06
+                     pre2:   8.97654e-06
+                     pre3:   7.55185e-06
+                     pre4:   1.09244e-05
+                     pre5:   1.5415e-05
+                     pre6:   2.1988e-06
+                     pre7:   3.17863e-06
+                     pre8:   5.73395e-07
+      0 Linear |R| = [32m4.853429e-01[39m
+      1 Linear |R| = [32m2.772206e-01[39m
+      2 Linear |R| = [32m2.454770e-01[39m
+      3 Linear |R| = [32m1.911118e-01[39m
+      4 Linear |R| = [32m1.716527e-01[39m
+      5 Linear |R| = [32m1.477418e-01[39m
+      6 Linear |R| = [32m1.298982e-01[39m
+      7 Linear |R| = [32m1.097153e-01[39m
+      8 Linear |R| = [32m9.379668e-02[39m
+      9 Linear |R| = [32m7.472503e-02[39m
+     10 Linear |R| = [32m5.959679e-02[39m
+     11 Linear |R| = [32m4.624707e-02[39m
+     12 Linear |R| = [32m3.661071e-02[39m
+     13 Linear |R| = [32m2.917523e-02[39m
+     14 Linear |R| = [32m2.476157e-02[39m
+     15 Linear |R| = [32m2.173427e-02[39m
+     16 Linear |R| = [32m1.979296e-02[39m
+     17 Linear |R| = [32m1.825844e-02[39m
+     18 Linear |R| = [32m1.707816e-02[39m
+     19 Linear |R| = [32m1.596126e-02[39m
+     20 Linear |R| = [32m1.504528e-02[39m
+     21 Linear |R| = [32m1.414776e-02[39m
+     22 Linear |R| = [32m1.343956e-02[39m
+     23 Linear |R| = [32m1.270662e-02[39m
+     24 Linear |R| = [32m1.200570e-02[39m
+     25 Linear |R| = [32m1.110904e-02[39m
+     26 Linear |R| = [32m1.019334e-02[39m
+     27 Linear |R| = [32m9.174812e-03[39m
+     28 Linear |R| = [32m8.387616e-03[39m
+     29 Linear |R| = [32m7.726086e-03[39m
+     30 Linear |R| = [32m7.256579e-03[39m
+     31 Linear |R| = [32m6.878186e-03[39m
+     32 Linear |R| = [33m6.583979e-03[39m
+     33 Linear |R| = [32m6.244559e-03[39m
+     34 Linear |R| = [32m5.883826e-03[39m
+     35 Linear |R| = [32m5.368164e-03[39m
+     36 Linear |R| = [32m4.682939e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 1 Nonlinear |R| = [32m4.682939e-03[39m
+    |residual|_2 of individual variables:
+                     group1: 0.00171759
+                     group2: 0.00163074
+                     group3: 0.00144384
+                     group4: 0.00377304
+                     pre1:   1.00468e-09
+                     pre2:   2.14939e-09
+                     pre3:   1.80825e-09
+                     pre4:   2.61579e-09
+                     pre5:   3.69105e-09
+                     pre6:   5.2649e-10
+                     pre7:   7.61106e-10
+                     pre8:   1.37296e-10
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ +================+=====================+=====================+
+ Chebyshev step: 0
+ ________________________________________________________________________________ 
+ Power iteration= 1
+ 0 Nonlinear |R| = [32m4.719727e-03[39m
+    |residual|_2 of individual variables:
+                     group1: 0.00180866
+                     group2: 0.00163831
+                     group3: 0.00144385
+                     group4: 0.00377304
+                     pre1:   1.00468e-09
+                     pre2:   2.14939e-09
+                     pre3:   1.80825e-09
+                     pre4:   2.61579e-09
+                     pre5:   3.69105e-09
+                     pre6:   5.2649e-10
+                     pre7:   7.61106e-10
+                     pre8:   1.37296e-10
+      0 Linear |R| = [32m4.719727e-03[39m
+      1 Linear |R| = [32m4.376230e-03[39m
+      2 Linear |R| = [32m4.122825e-03[39m
+      3 Linear |R| = [32m3.740697e-03[39m
+      4 Linear |R| = [33m3.560438e-03[39m
+      5 Linear |R| = [33m3.441523e-03[39m
+      6 Linear |R| = [33m3.390903e-03[39m
+      7 Linear |R| = [33m3.355700e-03[39m
+      8 Linear |R| = [33m3.338306e-03[39m
+      9 Linear |R| = [33m3.316045e-03[39m
+     10 Linear |R| = [33m3.278638e-03[39m
+     11 Linear |R| = [33m3.181548e-03[39m
+     12 Linear |R| = [32m3.008085e-03[39m
+     13 Linear |R| = [32m2.723515e-03[39m
+     14 Linear |R| = [32m2.384459e-03[39m
+     15 Linear |R| = [32m2.014773e-03[39m
+     16 Linear |R| = [32m1.726682e-03[39m
+     17 Linear |R| = [32m1.476186e-03[39m
+     18 Linear |R| = [32m1.285260e-03[39m
+     19 Linear |R| = [32m1.103133e-03[39m
+     20 Linear |R| = [32m9.455579e-04[39m
+     21 Linear |R| = [32m7.846194e-04[39m
+     22 Linear |R| = [32m6.513437e-04[39m
+     23 Linear |R| = [32m5.250751e-04[39m
+     24 Linear |R| = [32m4.129690e-04[39m
+     25 Linear |R| = [32m3.136965e-04[39m
+     26 Linear |R| = [32m2.412221e-04[39m
+     27 Linear |R| = [32m1.902825e-04[39m
+     28 Linear |R| = [32m1.566850e-04[39m
+     29 Linear |R| = [32m1.350788e-04[39m
+     30 Linear |R| = [32m1.183668e-04[39m
+     31 Linear |R| = [32m1.034664e-04[39m
+     32 Linear |R| = [32m9.002372e-05[39m
+     33 Linear |R| = [32m7.820811e-05[39m
+     34 Linear |R| = [32m6.631806e-05[39m
+     35 Linear |R| = [32m5.642210e-05[39m
+     36 Linear |R| = [32m4.888187e-05[39m
+     37 Linear |R| = [32m4.105402e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 1 Nonlinear |R| = [32m4.105402e-05[39m
+    |residual|_2 of individual variables:
+                     group1: 1.05114e-05
+                     group2: 1.17235e-05
+                     group3: 2.62206e-05
+                     group4: 2.73858e-05
+                     pre1:   6.00283e-12
+                     pre2:   1.28424e-11
+                     pre3:   1.08041e-11
+                     pre4:   1.56291e-11
+                     pre5:   2.20536e-11
+                     pre6:   3.14572e-12
+                     pre7:   4.54753e-12
+                     pre8:   8.20332e-13
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ +================+=====================+=====================+
+ Chebyshev step: 0
+ ________________________________________________________________________________ 
+ Power iteration= 2
+ 0 Nonlinear |R| = [32m1.072947e-03[39m
+    |residual|_2 of individual variables:
+                     group1: 0.00102659
+                     group2: 0.00030966
+                     group3: 2.62132e-05
+                     group4: 2.73858e-05
+                     pre1:   6.00283e-12
+                     pre2:   1.28424e-11
+                     pre3:   1.08041e-11
+                     pre4:   1.56291e-11
+                     pre5:   2.20536e-11
+                     pre6:   3.14572e-12
+                     pre7:   4.54753e-12
+                     pre8:   8.20332e-13
+      0 Linear |R| = [32m1.072947e-03[39m
+      1 Linear |R| = [32m9.803811e-04[39m
+      2 Linear |R| = [33m9.464222e-04[39m
+      3 Linear |R| = [33m9.217102e-04[39m
+      4 Linear |R| = [33m8.879713e-04[39m
+      5 Linear |R| = [32m8.211973e-04[39m
+      6 Linear |R| = [32m7.775749e-04[39m
+      7 Linear |R| = [33m7.394307e-04[39m
+      8 Linear |R| = [33m7.063495e-04[39m
+      9 Linear |R| = [32m6.662796e-04[39m
+     10 Linear |R| = [32m6.298506e-04[39m
+     11 Linear |R| = [33m5.986453e-04[39m
+     12 Linear |R| = [32m5.674086e-04[39m
+     13 Linear |R| = [32m5.305594e-04[39m
+     14 Linear |R| = [32m4.887388e-04[39m
+     15 Linear |R| = [32m4.423701e-04[39m
+     16 Linear |R| = [32m3.948280e-04[39m
+     17 Linear |R| = [32m3.485368e-04[39m
+     18 Linear |R| = [32m3.043428e-04[39m
+     19 Linear |R| = [32m2.702169e-04[39m
+     20 Linear |R| = [32m2.447527e-04[39m
+     21 Linear |R| = [32m2.231572e-04[39m
+     22 Linear |R| = [32m2.055035e-04[39m
+     23 Linear |R| = [32m1.925659e-04[39m
+     24 Linear |R| = [32m1.815625e-04[39m
+     25 Linear |R| = [32m1.721726e-04[39m
+     26 Linear |R| = [32m1.615709e-04[39m
+     27 Linear |R| = [32m1.508792e-04[39m
+     28 Linear |R| = [32m1.399646e-04[39m
+     29 Linear |R| = [32m1.248314e-04[39m
+     30 Linear |R| = [32m1.097630e-04[39m
+     31 Linear |R| = [32m9.322005e-05[39m
+     32 Linear |R| = [32m8.008324e-05[39m
+     33 Linear |R| = [32m6.740649e-05[39m
+     34 Linear |R| = [32m5.720465e-05[39m
+     35 Linear |R| = [32m4.944635e-05[39m
+     36 Linear |R| = [32m4.238009e-05[39m
+     37 Linear |R| = [32m3.674453e-05[39m
+     38 Linear |R| = [32m3.166393e-05[39m
+     39 Linear |R| = [32m2.740102e-05[39m
+     40 Linear |R| = [32m2.315499e-05[39m
+     41 Linear |R| = [32m1.925046e-05[39m
+     42 Linear |R| = [32m1.569657e-05[39m
+     43 Linear |R| = [32m1.271120e-05[39m
+     44 Linear |R| = [32m1.038499e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 1 Nonlinear |R| = [32m1.038499e-05[39m
+    |residual|_2 of individual variables:
+                     group1: 3.34196e-06
+                     group2: 2.88406e-06
+                     group3: 3.5521e-06
+                     group4: 8.70311e-06
+                     pre1:   1.37606e-12
+                     pre2:   2.94393e-12
+                     pre3:   2.47669e-12
+                     pre4:   3.58275e-12
+                     pre5:   5.05548e-12
+                     pre6:   7.21112e-13
+                     pre7:   1.04246e-12
+                     pre8:   1.88049e-13
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ +================+=====================+=====================+
+ Chebyshev step: 0
+ ________________________________________________________________________________ 
+ Power iteration= 3
+ 0 Nonlinear |R| = [32m4.814306e-04[39m
+    |residual|_2 of individual variables:
+                     group1: 0.000460805
+                     group2: 0.000139088
+                     group3: 3.55004e-06
+                     group4: 8.70311e-06
+                     pre1:   1.37606e-12
+                     pre2:   2.94393e-12
+                     pre3:   2.47669e-12
+                     pre4:   3.58275e-12
+                     pre5:   5.05548e-12
+                     pre6:   7.21112e-13
+                     pre7:   1.04246e-12
+                     pre8:   1.88049e-13
+      0 Linear |R| = [32m4.814306e-04[39m
+      1 Linear |R| = [32m4.408540e-04[39m
+      2 Linear |R| = [33m4.293450e-04[39m
+      3 Linear |R| = [33m4.205879e-04[39m
+      4 Linear |R| = [33m4.079812e-04[39m
+      5 Linear |R| = [32m3.832488e-04[39m
+      6 Linear |R| = [33m3.679401e-04[39m
+      7 Linear |R| = [33m3.507074e-04[39m
+      8 Linear |R| = [33m3.374734e-04[39m
+      9 Linear |R| = [32m3.178880e-04[39m
+     10 Linear |R| = [33m3.023071e-04[39m
+     11 Linear |R| = [32m2.843970e-04[39m
+     12 Linear |R| = [32m2.676431e-04[39m
+     13 Linear |R| = [32m2.470162e-04[39m
+     14 Linear |R| = [32m2.263826e-04[39m
+     15 Linear |R| = [32m2.022255e-04[39m
+     16 Linear |R| = [32m1.793946e-04[39m
+     17 Linear |R| = [32m1.584008e-04[39m
+     18 Linear |R| = [32m1.401682e-04[39m
+     19 Linear |R| = [32m1.249484e-04[39m
+     20 Linear |R| = [32m1.135107e-04[39m
+     21 Linear |R| = [32m1.036030e-04[39m
+     22 Linear |R| = [32m9.562616e-05[39m
+     23 Linear |R| = [32m8.939379e-05[39m
+     24 Linear |R| = [32m8.367822e-05[39m
+     25 Linear |R| = [32m7.872780e-05[39m
+     26 Linear |R| = [32m7.323364e-05[39m
+     27 Linear |R| = [32m6.782537e-05[39m
+     28 Linear |R| = [32m6.187764e-05[39m
+     29 Linear |R| = [32m5.492222e-05[39m
+     30 Linear |R| = [32m4.800974e-05[39m
+     31 Linear |R| = [32m4.110905e-05[39m
+     32 Linear |R| = [32m3.582687e-05[39m
+     33 Linear |R| = [32m3.064322e-05[39m
+     34 Linear |R| = [32m2.649411e-05[39m
+     35 Linear |R| = [32m2.330776e-05[39m
+     36 Linear |R| = [32m2.027027e-05[39m
+     37 Linear |R| = [32m1.782085e-05[39m
+     38 Linear |R| = [32m1.538840e-05[39m
+     39 Linear |R| = [32m1.325930e-05[39m
+     40 Linear |R| = [32m1.108149e-05[39m
+     41 Linear |R| = [32m9.113683e-06[39m
+     42 Linear |R| = [32m7.493606e-06[39m
+     43 Linear |R| = [32m6.142114e-06[39m
+     44 Linear |R| = [32m5.139865e-06[39m
+     45 Linear |R| = [32m4.303177e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+ 1 Nonlinear |R| = [32m4.303177e-06[39m
+    |residual|_2 of individual variables:
+                     group1: 1.27899e-06
+                     group2: 1.02438e-06
+                     group3: 1.56969e-06
+                     group4: 3.65626e-06
+                     pre1:   5.31709e-13
+                     pre2:   1.13753e-12
+                     pre3:   9.56989e-13
+                     pre4:   1.38437e-12
+                     pre5:   1.95343e-12
+                     pre6:   2.78637e-13
+                     pre7:   4.02804e-13
+                     pre8:   7.2662e-14
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ +================+=====================+=====================+
+ Chebyshev step: 0
+ ________________________________________________________________________________ 
+ Power iteration= 4
+ 0 Nonlinear |R| = [32m2.559582e-04[39m
+    |residual|_2 of individual variables:
+                     group1: 0.000245028
+                     group2: 7.38911e-05
+                     group3: 1.56895e-06
+                     group4: 3.65626e-06
+                     pre1:   5.31709e-13
+                     pre2:   1.13753e-12
+                     pre3:   9.56989e-13
+                     pre4:   1.38437e-12
+                     pre5:   1.95343e-12
+                     pre6:   2.78637e-13
+                     pre7:   4.02804e-13
+                     pre8:   7.2662e-14
+      0 Linear |R| = [32m2.559582e-04[39m
+      1 Linear |R| = [32m2.348074e-04[39m
+      2 Linear |R| = [33m2.291503e-04[39m
+      3 Linear |R| = [33m2.245382e-04[39m
+      4 Linear |R| = [33m2.180542e-04[39m
+      5 Linear |R| = [32m2.052933e-04[39m
+      6 Linear |R| = [33m1.975275e-04[39m
+      7 Linear |R| = [33m1.878411e-04[39m
+      8 Linear |R| = [33m1.809029e-04[39m
+      9 Linear |R| = [32m1.701594e-04[39m
+     10 Linear |R| = [33m1.617519e-04[39m
+     11 Linear |R| = [32m1.513253e-04[39m
+     12 Linear |R| = [32m1.418852e-04[39m
+     13 Linear |R| = [32m1.301608e-04[39m
+     14 Linear |R| = [32m1.188122e-04[39m
+     15 Linear |R| = [32m1.054500e-04[39m
+     16 Linear |R| = [32m9.316838e-05[39m
+     17 Linear |R| = [32m8.225555e-05[39m
+     18 Linear |R| = [32m7.285897e-05[39m
+     19 Linear |R| = [32m6.488355e-05[39m
+     20 Linear |R| = [32m5.895523e-05[39m
+     21 Linear |R| = [32m5.376981e-05[39m
+     22 Linear |R| = [32m4.960206e-05[39m
+     23 Linear |R| = [32m4.630243e-05[39m
+     24 Linear |R| = [32m4.320013e-05[39m
+     25 Linear |R| = [32m4.048609e-05[39m
+     26 Linear |R| = [32m3.755964e-05[39m
+     27 Linear |R| = [32m3.470335e-05[39m
+     28 Linear |R| = [32m3.151841e-05[39m
+     29 Linear |R| = [32m2.803172e-05[39m
+     30 Linear |R| = [32m2.460746e-05[39m
+     31 Linear |R| = [32m2.128692e-05[39m
+     32 Linear |R| = [32m1.877138e-05[39m
+     33 Linear |R| = [32m1.623313e-05[39m
+     34 Linear |R| = [32m1.416643e-05[39m
+     35 Linear |R| = [32m1.251748e-05[39m
+     36 Linear |R| = [32m1.091345e-05[39m
+     37 Linear |R| = [32m9.583122e-06[39m
+     38 Linear |R| = [32m8.270676e-06[39m
+     39 Linear |R| = [32m7.112386e-06[39m
+     40 Linear |R| = [32m5.924296e-06[39m
+     41 Linear |R| = [32m4.881357e-06[39m
+     42 Linear |R| = [32m4.049319e-06[39m
+     43 Linear |R| = [32m3.379368e-06[39m
+     44 Linear |R| = [32m2.883848e-06[39m
+     45 Linear |R| = [32m2.462423e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+ 1 Nonlinear |R| = [32m2.462423e-06[39m
+    |residual|_2 of individual variables:
+                     group1: 6.89466e-07
+                     group2: 5.40274e-07
+                     group3: 8.94464e-07
+                     group4: 2.12042e-06
+                     pre1:   2.72138e-13
+                     pre2:   5.82207e-13
+                     pre3:   4.89803e-13
+                     pre4:   7.08543e-13
+                     pre5:   9.99799e-13
+                     pre6:   1.42611e-13
+                     pre7:   2.06162e-13
+                     pre8:   3.71896e-14
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ +================+=====================+=====================+
+ Chebyshev step: 0
+ ________________________________________________________________________________ 
+ Power iteration= 5
+ 0 Nonlinear |R| = [32m1.395493e-04[39m
+    |residual|_2 of individual variables:
+                     group1: 0.000133591
+                     group2: 4.0276e-05
+                     group3: 8.94284e-07
+                     group4: 2.12042e-06
+                     pre1:   2.72138e-13
+                     pre2:   5.82207e-13
+                     pre3:   4.89803e-13
+                     pre4:   7.08543e-13
+                     pre5:   9.99799e-13
+                     pre6:   1.42611e-13
+                     pre7:   2.06162e-13
+                     pre8:   3.71896e-14
+      0 Linear |R| = [32m1.395493e-04[39m
+      1 Linear |R| = [32m1.281244e-04[39m
+      2 Linear |R| = [33m1.251247e-04[39m
+      3 Linear |R| = [33m1.225910e-04[39m
+      4 Linear |R| = [33m1.190750e-04[39m
+      5 Linear |R| = [32m1.121557e-04[39m
+      6 Linear |R| = [33m1.079737e-04[39m
+      7 Linear |R| = [32m1.025259e-04[39m
+      8 Linear |R| = [33m9.873887e-05[39m
+      9 Linear |R| = [32m9.279626e-05[39m
+     10 Linear |R| = [33m8.816183e-05[39m
+     11 Linear |R| = [32m8.226459e-05[39m
+     12 Linear |R| = [32m7.699621e-05[39m
+     13 Linear |R| = [32m7.043517e-05[39m
+     14 Linear |R| = [32m6.417416e-05[39m
+     15 Linear |R| = [32m5.679775e-05[39m
+     16 Linear |R| = [32m5.008630e-05[39m
+     17 Linear |R| = [32m4.421893e-05[39m
+     18 Linear |R| = [32m3.916742e-05[39m
+     19 Linear |R| = [32m3.486656e-05[39m
+     20 Linear |R| = [32m3.168116e-05[39m
+     21 Linear |R| = [32m2.888525e-05[39m
+     22 Linear |R| = [32m2.664169e-05[39m
+     23 Linear |R| = [32m2.485351e-05[39m
+     24 Linear |R| = [32m2.315592e-05[39m
+     25 Linear |R| = [32m2.166257e-05[39m
+     26 Linear |R| = [32m2.007701e-05[39m
+     27 Linear |R| = [32m1.853076e-05[39m
+     28 Linear |R| = [32m1.680164e-05[39m
+     29 Linear |R| = [32m1.495639e-05[39m
+     30 Linear |R| = [32m1.314997e-05[39m
+     31 Linear |R| = [32m1.141397e-05[39m
+     32 Linear |R| = [32m1.010990e-05[39m
+     33 Linear |R| = [32m8.778598e-06[39m
+     34 Linear |R| = [32m7.684143e-06[39m
+     35 Linear |R| = [32m6.797444e-06[39m
+     36 Linear |R| = [32m5.927934e-06[39m
+     37 Linear |R| = [32m5.199065e-06[39m
+     38 Linear |R| = [32m4.489554e-06[39m
+     39 Linear |R| = [32m3.863756e-06[39m
+     40 Linear |R| = [32m3.219073e-06[39m
+     41 Linear |R| = [32m2.659795e-06[39m
+     42 Linear |R| = [32m2.217439e-06[39m
+     43 Linear |R| = [32m1.867426e-06[39m
+     44 Linear |R| = [32m1.607628e-06[39m
+     45 Linear |R| = [32m1.384696e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+ 1 Nonlinear |R| = [32m1.384696e-06[39m
+    |residual|_2 of individual variables:
+                     group1: 3.7729e-07
+                     group2: 2.93484e-07
+                     group3: 4.95187e-07
+                     group4: 1.20154e-06
+                     pre1:   1.49172e-13
+                     pre2:   3.19135e-13
+                     pre3:   2.68484e-13
+                     pre4:   3.88386e-13
+                     pre5:   5.48037e-13
+                     pre6:   7.81718e-14
+                     pre7:   1.13007e-13
+                     pre8:   2.03854e-14
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ +================+=====================+=====================+
+ Chebyshev step: 0
+ ________________________________________________________________________________ 
+ Power iteration= 6
+ 0 Nonlinear |R| = [32m7.639566e-05[39m
+    |residual|_2 of individual variables:
+                     group1: 7.31339e-05
+                     group2: 2.20464e-05
+                     group3: 4.95161e-07
+                     group4: 1.20154e-06
+                     pre1:   1.49172e-13
+                     pre2:   3.19135e-13
+                     pre3:   2.68484e-13
+                     pre4:   3.88386e-13
+                     pre5:   5.48037e-13
+                     pre6:   7.81718e-14
+                     pre7:   1.13007e-13
+                     pre8:   2.03854e-14
+      0 Linear |R| = [32m7.639566e-05[39m
+      1 Linear |R| = [32m7.016683e-05[39m
+      2 Linear |R| = [33m6.854298e-05[39m
+      3 Linear |R| = [33m6.714733e-05[39m
+      4 Linear |R| = [33m6.522259e-05[39m
+      5 Linear |R| = [32m6.144022e-05[39m
+      6 Linear |R| = [33m5.915882e-05[39m
+      7 Linear |R| = [32m5.613025e-05[39m
+      8 Linear |R| = [33m5.405304e-05[39m
+      9 Linear |R| = [32m5.077902e-05[39m
+     10 Linear |R| = [32m4.822666e-05[39m
+     11 Linear |R| = [32m4.494664e-05[39m
+     12 Linear |R| = [32m4.203344e-05[39m
+     13 Linear |R| = [32m3.840171e-05[39m
+     14 Linear |R| = [32m3.495814e-05[39m
+     15 Linear |R| = [32m3.090126e-05[39m
+     16 Linear |R| = [32m2.722376e-05[39m
+     17 Linear |R| = [32m2.403445e-05[39m
+     18 Linear |R| = [32m2.128714e-05[39m
+     19 Linear |R| = [32m1.894638e-05[39m
+     20 Linear |R| = [32m1.721356e-05[39m
+     21 Linear |R| = [32m1.569291e-05[39m
+     22 Linear |R| = [32m1.447296e-05[39m
+     23 Linear |R| = [32m1.349831e-05[39m
+     24 Linear |R| = [32m1.256815e-05[39m
+     25 Linear |R| = [32m1.174816e-05[39m
+     26 Linear |R| = [32m1.088424e-05[39m
+     27 Linear |R| = [32m1.004139e-05[39m
+     28 Linear |R| = [32m9.098219e-06[39m
+     29 Linear |R| = [32m8.101849e-06[39m
+     30 Linear |R| = [32m7.126883e-06[39m
+     31 Linear |R| = [32m6.192854e-06[39m
+     32 Linear |R| = [32m5.494839e-06[39m
+     33 Linear |R| = [32m4.778967e-06[39m
+     34 Linear |R| = [32m4.187994e-06[39m
+     35 Linear |R| = [32m3.706240e-06[39m
+     36 Linear |R| = [32m3.232082e-06[39m
+     37 Linear |R| = [32m2.833068e-06[39m
+     38 Linear |R| = [32m2.448161e-06[39m
+     39 Linear |R| = [32m2.109223e-06[39m
+     40 Linear |R| = [32m1.758862e-06[39m
+     41 Linear |R| = [32m1.456270e-06[39m
+     42 Linear |R| = [32m1.217518e-06[39m
+     43 Linear |R| = [32m1.030063e-06[39m
+     44 Linear |R| = [32m8.906100e-07[39m
+     45 Linear |R| = [32m7.703260e-07[39m
+     46 Linear |R| = [32m6.681799e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m6.681799e-07[39m
+    |residual|_2 of individual variables:
+                     group1: 1.75093e-07
+                     group2: 1.44923e-07
+                     group3: 2.41017e-07
+                     group4: 5.80272e-07
+                     pre1:   8.76986e-14
+                     pre2:   1.87621e-13
+                     pre3:   1.57843e-13
+                     pre4:   2.28334e-13
+                     pre5:   3.22193e-13
+                     pre6:   4.59575e-14
+                     pre7:   6.64373e-14
+                     pre8:   1.19847e-14
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ +================+=====================+=====================+
+ Chebyshev step: 1
+ ________________________________________________________________________________ 
+ Power iteration= 7
+ 0 Nonlinear |R| = [32m2.873597e-05[39m
+    |residual|_2 of individual variables:
+                     group1: 2.75229e-05
+                     group2: 8.24923e-06
+                     group3: 1.98754e-07
+                     group4: 3.91464e-07
+                     pre1:   5.68888e-09
+                     pre2:   1.21707e-08
+                     pre3:   1.02391e-08
+                     pre4:   1.48117e-08
+                     pre5:   2.09002e-08
+                     pre6:   2.9812e-09
+                     pre7:   4.30969e-09
+                     pre8:   7.77428e-10
+      0 Linear |R| = [32m2.873597e-05[39m
+      1 Linear |R| = [32m2.640075e-05[39m
+      2 Linear |R| = [33m2.579506e-05[39m
+      3 Linear |R| = [33m2.526507e-05[39m
+      4 Linear |R| = [33m2.453804e-05[39m
+      5 Linear |R| = [32m2.311543e-05[39m
+      6 Linear |R| = [33m2.225762e-05[39m
+      7 Linear |R| = [32m2.110036e-05[39m
+      8 Linear |R| = [33m2.031710e-05[39m
+      9 Linear |R| = [32m1.907873e-05[39m
+     10 Linear |R| = [32m1.811286e-05[39m
+     11 Linear |R| = [32m1.686233e-05[39m
+     12 Linear |R| = [32m1.575724e-05[39m
+     13 Linear |R| = [32m1.438069e-05[39m
+     14 Linear |R| = [32m1.307986e-05[39m
+     15 Linear |R| = [32m1.154931e-05[39m
+     16 Linear |R| = [32m1.016446e-05[39m
+     17 Linear |R| = [32m8.973008e-06[39m
+     18 Linear |R| = [32m7.945036e-06[39m
+     19 Linear |R| = [32m7.068672e-06[39m
+     20 Linear |R| = [32m6.419677e-06[39m
+     21 Linear |R| = [32m5.850994e-06[39m
+     22 Linear |R| = [32m5.393947e-06[39m
+     23 Linear |R| = [32m5.029329e-06[39m
+     24 Linear |R| = [32m4.679502e-06[39m
+     25 Linear |R| = [32m4.369786e-06[39m
+     26 Linear |R| = [32m4.046778e-06[39m
+     27 Linear |R| = [32m3.732382e-06[39m
+     28 Linear |R| = [32m3.380467e-06[39m
+     29 Linear |R| = [32m3.011367e-06[39m
+     30 Linear |R| = [32m2.651447e-06[39m
+     31 Linear |R| = [32m2.307408e-06[39m
+     32 Linear |R| = [32m2.051325e-06[39m
+     33 Linear |R| = [32m1.787705e-06[39m
+     34 Linear |R| = [32m1.569061e-06[39m
+     35 Linear |R| = [32m1.390097e-06[39m
+     36 Linear |R| = [32m1.213052e-06[39m
+     37 Linear |R| = [32m1.063196e-06[39m
+     38 Linear |R| = [32m9.202996e-07[39m
+     39 Linear |R| = [32m7.945425e-07[39m
+     40 Linear |R| = [32m6.638678e-07[39m
+     41 Linear |R| = [32m5.514238e-07[39m
+     42 Linear |R| = [32m4.626570e-07[39m
+     43 Linear |R| = [32m3.935278e-07[39m
+     44 Linear |R| = [32m3.419211e-07[39m
+     45 Linear |R| = [32m2.971637e-07[39m
+     46 Linear |R| = [32m2.586610e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m2.586610e-07[39m
+    |residual|_2 of individual variables:
+                     group1: 6.73633e-08
+                     group2: 5.58955e-08
+                     group3: 9.18693e-08
+                     group4: 2.25396e-07
+                     pre1:   4.06274e-13
+                     pre2:   8.69175e-13
+                     pre3:   7.31226e-13
+                     pre4:   1.05778e-12
+                     pre5:   1.4926e-12
+                     pre6:   2.12904e-13
+                     pre7:   3.07778e-13
+                     pre8:   5.55203e-14
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ |              7 |      1.16612928e+00 |      6.46265668e-04 |
+ +================+=====================+=====================+
+ Chebyshev step: 2
+ ________________________________________________________________________________ 
+ Power iteration= 8
+ 0 Nonlinear |R| = [32m5.743293e-06[39m
+    |residual|_2 of individual variables:
+                     group1: 5.48873e-06
+                     group2: 1.68732e-06
+                     group3: 3.84711e-08
+                     group4: 1.00638e-07
+                     pre1:   4.3364e-09
+                     pre2:   9.27721e-09
+                     pre3:   7.8048e-09
+                     pre4:   1.12903e-08
+                     pre5:   1.59314e-08
+                     pre6:   2.27244e-09
+                     pre7:   3.2851e-09
+                     pre8:   5.92601e-10
+      0 Linear |R| = [32m5.743293e-06[39m
+      1 Linear |R| = [32m5.279951e-06[39m
+      2 Linear |R| = [33m5.160438e-06[39m
+      3 Linear |R| = [33m5.054390e-06[39m
+      4 Linear |R| = [33m4.909984e-06[39m
+      5 Linear |R| = [32m4.627310e-06[39m
+      6 Linear |R| = [33m4.456634e-06[39m
+      7 Linear |R| = [32m4.222421e-06[39m
+      8 Linear |R| = [33m4.065572e-06[39m
+      9 Linear |R| = [32m3.816690e-06[39m
+     10 Linear |R| = [32m3.622038e-06[39m
+     11 Linear |R| = [32m3.368123e-06[39m
+     12 Linear |R| = [32m3.144620e-06[39m
+     13 Linear |R| = [32m2.865453e-06[39m
+     14 Linear |R| = [32m2.603841e-06[39m
+     15 Linear |R| = [32m2.296260e-06[39m
+     16 Linear |R| = [32m2.018685e-06[39m
+     17 Linear |R| = [32m1.782204e-06[39m
+     18 Linear |R| = [32m1.578093e-06[39m
+     19 Linear |R| = [32m1.404315e-06[39m
+     20 Linear |R| = [32m1.275216e-06[39m
+     21 Linear |R| = [32m1.162735e-06[39m
+     22 Linear |R| = [32m1.072301e-06[39m
+     23 Linear |R| = [32m9.999688e-07[39m
+     24 Linear |R| = [32m9.299062e-07[39m
+     25 Linear |R| = [32m8.679817e-07[39m
+     26 Linear |R| = [32m8.037360e-07[39m
+     27 Linear |R| = [32m7.408585e-07[39m
+     28 Linear |R| = [32m6.704861e-07[39m
+     29 Linear |R| = [32m5.973048e-07[39m
+     30 Linear |R| = [32m5.255108e-07[39m
+     31 Linear |R| = [32m4.570034e-07[39m
+     32 Linear |R| = [32m4.064593e-07[39m
+     33 Linear |R| = [32m3.543199e-07[39m
+     34 Linear |R| = [32m3.109794e-07[39m
+     35 Linear |R| = [32m2.753235e-07[39m
+     36 Linear |R| = [32m2.399678e-07[39m
+     37 Linear |R| = [32m2.100720e-07[39m
+     38 Linear |R| = [32m1.819784e-07[39m
+     39 Linear |R| = [32m1.573862e-07[39m
+     40 Linear |R| = [32m1.317412e-07[39m
+     41 Linear |R| = [32m1.097278e-07[39m
+     42 Linear |R| = [32m9.237963e-08[39m
+     43 Linear |R| = [32m7.893466e-08[39m
+     44 Linear |R| = [32m6.887201e-08[39m
+     45 Linear |R| = [32m6.007293e-08[39m
+     46 Linear |R| = [32m5.245771e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m5.245771e-08[39m
+    |residual|_2 of individual variables:
+                     group1: 1.3543e-08
+                     group2: 1.13896e-08
+                     group3: 1.82905e-08
+                     group4: 4.58708e-08
+                     pre1:   3.66383e-13
+                     pre2:   7.83834e-13
+                     pre3:   6.5943e-13
+                     pre4:   9.53923e-13
+                     pre5:   1.34605e-12
+                     pre6:   1.91999e-13
+                     pre7:   2.77559e-13
+                     pre8:   5.0069e-14
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ |              7 |      1.16612928e+00 |      6.46265668e-04 |
+ |              8 |      1.16635864e+00 |      1.29091563e-04 |
+ +================+=====================+=====================+
+ Chebyshev step: 3
+ ________________________________________________________________________________ 
+ Power iteration= 9
+ 0 Nonlinear |R| = [32m1.122167e-06[39m
+    |residual|_2 of individual variables:
+                     group1: 1.06977e-06
+                     group2: 3.38491e-07
+                     group3: 7.22534e-09
+                     group4: 1.39233e-08
+                     pre1:   8.92205e-10
+                     pre2:   1.90877e-09
+                     pre3:   1.60582e-09
+                     pre4:   2.32296e-09
+                     pre5:   3.27785e-09
+                     pre6:   4.67551e-10
+                     pre7:   6.75902e-10
+                     pre8:   1.21926e-10
+      0 Linear |R| = [32m1.122167e-06[39m
+      1 Linear |R| = [32m1.031573e-06[39m
+      2 Linear |R| = [33m1.008217e-06[39m
+      3 Linear |R| = [33m9.878887e-07[39m
+      4 Linear |R| = [33m9.599784e-07[39m
+      5 Linear |R| = [32m9.051172e-07[39m
+      6 Linear |R| = [33m8.718905e-07[39m
+      7 Linear |R| = [32m8.270333e-07[39m
+      8 Linear |R| = [33m7.964882e-07[39m
+      9 Linear |R| = [32m7.481139e-07[39m
+     10 Linear |R| = [32m7.101971e-07[39m
+     11 Linear |R| = [32m6.611392e-07[39m
+     12 Linear |R| = [32m6.175849e-07[39m
+     13 Linear |R| = [32m5.633749e-07[39m
+     14 Linear |R| = [32m5.121520e-07[39m
+     15 Linear |R| = [32m4.520956e-07[39m
+     16 Linear |R| = [32m3.976185e-07[39m
+     17 Linear |R| = [32m3.509356e-07[39m
+     18 Linear |R| = [32m3.107258e-07[39m
+     19 Linear |R| = [32m2.765165e-07[39m
+     20 Linear |R| = [32m2.510570e-07[39m
+     21 Linear |R| = [32m2.288955e-07[39m
+     22 Linear |R| = [32m2.110195e-07[39m
+     23 Linear |R| = [32m1.968100e-07[39m
+     24 Linear |R| = [32m1.831381e-07[39m
+     25 Linear |R| = [32m1.710363e-07[39m
+     26 Linear |R| = [32m1.584015e-07[39m
+     27 Linear |R| = [32m1.460824e-07[39m
+     28 Linear |R| = [32m1.322867e-07[39m
+     29 Linear |R| = [32m1.178059e-07[39m
+     30 Linear |R| = [32m1.036710e-07[39m
+     31 Linear |R| = [32m9.017099e-08[39m
+     32 Linear |R| = [32m8.013457e-08[39m
+     33 Linear |R| = [32m6.982528e-08[39m
+     34 Linear |R| = [32m6.125347e-08[39m
+     35 Linear |R| = [32m5.425112e-08[39m
+     36 Linear |R| = [32m4.734032e-08[39m
+     37 Linear |R| = [32m4.149728e-08[39m
+     38 Linear |R| = [32m3.594660e-08[39m
+     39 Linear |R| = [32m3.106927e-08[39m
+     40 Linear |R| = [32m2.599373e-08[39m
+     41 Linear |R| = [32m2.162322e-08[39m
+     42 Linear |R| = [32m1.817332e-08[39m
+     43 Linear |R| = [32m1.548890e-08[39m
+     44 Linear |R| = [32m1.348129e-08[39m
+     45 Linear |R| = [32m1.173238e-08[39m
+     46 Linear |R| = [32m1.022486e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m1.022486e-08[39m
+    |residual|_2 of individual variables:
+                     group1: 2.639e-09
+                     group2: 2.21922e-09
+                     group3: 3.59127e-09
+                     group4: 8.93092e-09
+                     pre1:   5.17849e-14
+                     pre2:   1.10788e-13
+                     pre3:   9.32043e-14
+                     pre4:   1.34828e-13
+                     pre5:   1.90251e-13
+                     pre6:   2.71373e-14
+                     pre7:   3.92303e-14
+                     pre8:   7.07678e-15
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ |              0 |      1.17899745e+00 |      3.94936418e+00 |
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ |              7 |      1.16612928e+00 |      6.46265668e-04 |
+ |              8 |      1.16635864e+00 |      1.29091563e-04 |
+ |              9 |      1.16640548e+00 |      2.51116597e-05 |
+ +================+=====================+=====================+
+ Chebyshev step: 4
+ ________________________________________________________________________________ 
+ Power iteration= 10
+ 0 Nonlinear |R| = [32m2.252359e-07[39m
+    |residual|_2 of individual variables:
+                     group1: 2.16392e-07
+                     group2: 6.23319e-08
+                     group3: 1.62122e-09
+                     group4: 4.10029e-09
+                     pre1:   1.74532e-10
+                     pre2:   3.7339e-10
+                     pre3:   3.14129e-10
+                     pre4:   4.54415e-10
+                     pre5:   6.41207e-10
+                     pre6:   9.14616e-11
+                     pre7:   1.32219e-10
+                     pre8:   2.38511e-11
+      0 Linear |R| = [32m2.252359e-07[39m
+      1 Linear |R| = [32m2.068219e-07[39m
+      2 Linear |R| = [33m2.019825e-07[39m
+      3 Linear |R| = [33m1.977976e-07[39m
+      4 Linear |R| = [33m1.920329e-07[39m
+      5 Linear |R| = [32m1.807863e-07[39m
+      6 Linear |R| = [33m1.740006e-07[39m
+      7 Linear |R| = [32m1.649858e-07[39m
+      8 Linear |R| = [33m1.588477e-07[39m
+      9 Linear |R| = [32m1.491964e-07[39m
+     10 Linear |R| = [32m1.416891e-07[39m
+     11 Linear |R| = [32m1.320341e-07[39m
+     12 Linear |R| = [32m1.234944e-07[39m
+     13 Linear |R| = [32m1.128590e-07[39m
+     14 Linear |R| = [32m1.027758e-07[39m
+     15 Linear |R| = [32m9.087744e-08[39m
+     16 Linear |R| = [32m8.010804e-08[39m
+     17 Linear |R| = [32m7.076272e-08[39m
+     18 Linear |R| = [32m6.268244e-08[39m
+     19 Linear |R| = [32m5.579847e-08[39m
+     20 Linear |R| = [32m5.069690e-08[39m
+     21 Linear |R| = [32m4.621730e-08[39m
+     22 Linear |R| = [32m4.262016e-08[39m
+     23 Linear |R| = [32m3.974603e-08[39m
+     24 Linear |R| = [32m3.699188e-08[39m
+     25 Linear |R| = [32m3.456902e-08[39m
+     26 Linear |R| = [32m3.202253e-08[39m
+     27 Linear |R| = [32m2.953774e-08[39m
+     28 Linear |R| = [32m2.675993e-08[39m
+     29 Linear |R| = [32m2.383685e-08[39m
+     30 Linear |R| = [32m2.098028e-08[39m
+     31 Linear |R| = [32m1.824132e-08[39m
+     32 Linear |R| = [32m1.619222e-08[39m
+     33 Linear |R| = [32m1.408331e-08[39m
+     34 Linear |R| = [32m1.234280e-08[39m
+     35 Linear |R| = [32m1.092225e-08[39m
+     36 Linear |R| = [32m9.519034e-09[39m
+     37 Linear |R| = [32m8.338765e-09[39m
+     38 Linear |R| = [32m7.200862e-09[39m
+     39 Linear |R| = [32m6.198468e-09[39m
+     40 Linear |R| = [32m5.164249e-09[39m
+     41 Linear |R| = [32m4.273193e-09[39m
+     42 Linear |R| = [32m3.570381e-09[39m
+     43 Linear |R| = [32m3.018595e-09[39m
+     44 Linear |R| = [32m2.608729e-09[39m
+     45 Linear |R| = [32m2.255357e-09[39m
+     46 Linear |R| = [32m1.955678e-09[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m1.955678e-09[39m
+    |residual|_2 of individual variables:
+                     group1: 5.15251e-10
+                     group2: 4.22653e-10
+                     group3: 7.1208e-10
+                     group4: 1.69514e-09
+                     pre1:   1.49712e-14
+                     pre2:   3.20292e-14
+                     pre3:   2.69457e-14
+                     pre4:   3.89794e-14
+                     pre5:   5.50024e-14
+                     pre6:   7.84552e-15
+                     pre7:   1.13417e-14
+                     pre8:   2.04593e-15
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ :                :                     :                     :
+ |              1 |      1.14850071e+00 |      1.68720541e-02 |
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ |              7 |      1.16612928e+00 |      6.46265668e-04 |
+ |              8 |      1.16635864e+00 |      1.29091563e-04 |
+ |              9 |      1.16640548e+00 |      2.51116597e-05 |
+ |             10 |      1.16641469e+00 |      5.07187021e-06 |
+ +================+=====================+=====================+
+ Chebyshev step: 5
+ ________________________________________________________________________________ 
+ Power iteration= 11
+ 0 Nonlinear |R| = [32m4.372565e-08[39m
+    |residual|_2 of individual variables:
+                     group1: 4.14487e-08
+                     group2: 1.39161e-08
+                     group3: 2.52537e-10
+                     group4: 4.30011e-10
+                     pre1:   3.4318e-11
+                     pre2:   7.34194e-11
+                     pre3:   6.17668e-11
+                     pre4:   8.93511e-11
+                     pre5:   1.2608e-10
+                     pre6:   1.7984e-11
+                     pre7:   2.59981e-11
+                     pre8:   4.68981e-12
+      0 Linear |R| = [32m4.372565e-08[39m
+      1 Linear |R| = [32m4.021156e-08[39m
+      2 Linear |R| = [33m3.931126e-08[39m
+      3 Linear |R| = [33m3.853605e-08[39m
+      4 Linear |R| = [33m3.747478e-08[39m
+      5 Linear |R| = [32m3.535641e-08[39m
+      6 Linear |R| = [33m3.407911e-08[39m
+      7 Linear |R| = [32m3.234753e-08[39m
+      8 Linear |R| = [33m3.115854e-08[39m
+      9 Linear |R| = [32m2.926621e-08[39m
+     10 Linear |R| = [32m2.778231e-08[39m
+     11 Linear |R| = [32m2.586007e-08[39m
+     12 Linear |R| = [32m2.414619e-08[39m
+     13 Linear |R| = [32m2.201332e-08[39m
+     14 Linear |R| = [32m2.000253e-08[39m
+     15 Linear |R| = [32m1.764928e-08[39m
+     16 Linear |R| = [32m1.551938e-08[39m
+     17 Linear |R| = [32m1.369056e-08[39m
+     18 Linear |R| = [32m1.212002e-08[39m
+     19 Linear |R| = [32m1.078272e-08[39m
+     20 Linear |R| = [32m9.793800e-09[39m
+     21 Linear |R| = [32m8.926118e-09[39m
+     22 Linear |R| = [32m8.227829e-09[39m
+     23 Linear |R| = [32m7.673161e-09[39m
+     24 Linear |R| = [32m7.143431e-09[39m
+     25 Linear |R| = [32m6.672246e-09[39m
+     26 Linear |R| = [32m6.178032e-09[39m
+     27 Linear |R| = [32m5.697269e-09[39m
+     28 Linear |R| = [32m5.157736e-09[39m
+     29 Linear |R| = [32m4.592528e-09[39m
+     30 Linear |R| = [32m4.044109e-09[39m
+     31 Linear |R| = [32m3.521133e-09[39m
+     32 Linear |R| = [32m3.131268e-09[39m
+     33 Linear |R| = [32m2.729671e-09[39m
+     34 Linear |R| = [32m2.394587e-09[39m
+     35 Linear |R| = [32m2.121279e-09[39m
+     36 Linear |R| = [32m1.852013e-09[39m
+     37 Linear |R| = [32m1.623590e-09[39m
+     38 Linear |R| = [32m1.404226e-09[39m
+     39 Linear |R| = [32m1.211252e-09[39m
+     40 Linear |R| = [32m1.011275e-09[39m
+     41 Linear |R| = [32m8.397560e-10[39m
+     42 Linear |R| = [32m7.046848e-10[39m
+     43 Linear |R| = [32m5.996736e-10[39m
+     44 Linear |R| = [32m5.208681e-10[39m
+     45 Linear |R| = [32m4.523417e-10[39m
+     46 Linear |R| = [32m3.934942e-10[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m3.934942e-10[39m
+    |residual|_2 of individual variables:
+                     group1: 1.01288e-10
+                     group2: 8.62366e-11
+                     group3: 1.40336e-10
+                     group4: 3.42706e-10
+                     pre1:   9.14792e-16
+                     pre2:   1.95709e-15
+                     pre3:   1.64647e-15
+                     pre4:   2.38177e-15
+                     pre5:   3.36083e-15
+                     pre6:   4.79387e-16
+                     pre7:   6.93013e-16
+                     pre8:   1.25013e-16
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ :                :                     :                     :
+ |              2 |      1.15729833e+00 |      2.02108022e-02 |
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ |              7 |      1.16612928e+00 |      6.46265668e-04 |
+ |              8 |      1.16635864e+00 |      1.29091563e-04 |
+ |              9 |      1.16640548e+00 |      2.51116597e-05 |
+ |             10 |      1.16641469e+00 |      5.07187021e-06 |
+ |             11 |      1.16641652e+00 |      9.72801122e-07 |
+ +================+=====================+=====================+
+ Chebyshev step: 6
+ ________________________________________________________________________________ 
+ Power iteration= 12
+ 0 Nonlinear |R| = [32m9.053134e-09[39m
+    |residual|_2 of individual variables:
+                     group1: 8.73626e-09
+                     group2: 2.36431e-09
+                     group3: 6.65051e-11
+                     group4: 2.02991e-10
+                     pre1:   6.81033e-12
+                     pre2:   1.45699e-11
+                     pre3:   1.22575e-11
+                     pre4:   1.77315e-11
+                     pre5:   2.50203e-11
+                     pre6:   3.56888e-12
+                     pre7:   5.15926e-12
+                     pre8:   9.30682e-13
+      0 Linear |R| = [32m9.053134e-09[39m
+      1 Linear |R| = [32m8.315834e-09[39m
+      2 Linear |R| = [33m8.121844e-09[39m
+      3 Linear |R| = [33m7.947595e-09[39m
+      4 Linear |R| = [33m7.708915e-09[39m
+      5 Linear |R| = [32m7.253820e-09[39m
+      6 Linear |R| = [33m6.977350e-09[39m
+      7 Linear |R| = [32m6.602536e-09[39m
+      8 Linear |R| = [33m6.354097e-09[39m
+      9 Linear |R| = [32m5.963909e-09[39m
+     10 Linear |R| = [32m5.659991e-09[39m
+     11 Linear |R| = [32m5.265908e-09[39m
+     12 Linear |R| = [32m4.921089e-09[39m
+     13 Linear |R| = [32m4.492416e-09[39m
+     14 Linear |R| = [32m4.088688e-09[39m
+     15 Linear |R| = [32m3.611780e-09[39m
+     16 Linear |R| = [32m3.180446e-09[39m
+     17 Linear |R| = [32m2.811750e-09[39m
+     18 Linear |R| = [32m2.490744e-09[39m
+     19 Linear |R| = [32m2.217794e-09[39m
+     20 Linear |R| = [32m2.013024e-09[39m
+     21 Linear |R| = [32m1.835952e-09[39m
+     22 Linear |R| = [32m1.692792e-09[39m
+     23 Linear |R| = [32m1.578300e-09[39m
+     24 Linear |R| = [32m1.466555e-09[39m
+     25 Linear |R| = [32m1.368806e-09[39m
+     26 Linear |R| = [32m1.267545e-09[39m
+     27 Linear |R| = [32m1.168309e-09[39m
+     28 Linear |R| = [32m1.057766e-09[39m
+     29 Linear |R| = [32m9.429704e-10[39m
+     30 Linear |R| = [32m8.300905e-10[39m
+     31 Linear |R| = [32m7.220062e-10[39m
+     32 Linear |R| = [32m6.418835e-10[39m
+     33 Linear |R| = [32m5.591550e-10[39m
+     34 Linear |R| = [32m4.906917e-10[39m
+     35 Linear |R| = [32m4.343214e-10[39m
+     36 Linear |R| = [32m3.782092e-10[39m
+     37 Linear |R| = [32m3.310238e-10[39m
+     38 Linear |R| = [32m2.866544e-10[39m
+     39 Linear |R| = [32m2.477584e-10[39m
+     40 Linear |R| = [32m2.072897e-10[39m
+     41 Linear |R| = [32m1.725387e-10[39m
+     42 Linear |R| = [32m1.451119e-10[39m
+     43 Linear |R| = [32m1.237576e-10[39m
+     44 Linear |R| = [32m1.078904e-10[39m
+     45 Linear |R| = [32m9.403754e-11[39m
+     46 Linear |R| = [32m8.210504e-11[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 1 Nonlinear |R| = [32m8.210504e-11[39m
+    |residual|_2 of individual variables:
+                     group1: 2.14378e-11
+                     group2: 1.75339e-11
+                     group3: 2.8942e-11
+                     group4: 7.16699e-11
+                     pre1:   8.67141e-16
+                     pre2:   1.85515e-15
+                     pre3:   1.56071e-15
+                     pre4:   2.25771e-15
+                     pre5:   3.18576e-15
+                     pre6:   4.54416e-16
+                     pre7:   6.56915e-16
+                     pre8:   1.18501e-16
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 1
+
+ +================+=====================+=====================+
+ | iteration      | eigenvalue          | solution_difference |
+ +================+=====================+=====================+
+ :                :                     :                     :
+ |              3 |      1.16162253e+00 |      1.03643429e-02 |
+ |              4 |      1.16383529e+00 |      5.67315157e-03 |
+ |              5 |      1.16501359e+00 |      3.11952552e-03 |
+ |              6 |      1.16565258e+00 |      1.71294241e-03 |
+ |              7 |      1.16612928e+00 |      6.46265668e-04 |
+ |              8 |      1.16635864e+00 |      1.29091563e-04 |
+ |              9 |      1.16640548e+00 |      2.51116597e-05 |
+ |             10 |      1.16641469e+00 |      5.07187021e-06 |
+ |             11 |      1.16641652e+00 |      9.72801122e-07 |
+ |             12 |      1.16641688e+00 |      2.05471996e-07 |
+ +================+=====================+=====================+
+ Chebyshev step: 7
+ ________________________________________________________________________________ 
+
+*******************************************************
+ Eigenvalue = 1.1664168793
+*******************************************************
+
+Outlier Variable Residual Norms:
+  group4: [33m7.166995e-11[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+| time           | bnorm          | group1diff     | group1max      | group1norm     | group2diff     | group2max      | group2norm     | powernorm      | tot_fissions   |
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   1.160000e+00 |   4.115938e+00 |   0.000000e+00 |   6.585501e+02 |   4.115938e+00 |   0.000000e+00 |   6.585501e+02 |   1.486357e-11 |   4.662402e-01 |
+|   1.000000e+00 |   1.166417e+00 |   3.962932e+00 |   6.271043e-03 |   2.590152e+01 |   3.710171e+00 |   1.664382e-02 |   7.827499e+01 |   1.494834e-11 |   4.688498e-01 |
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+
+
+Reporter Values:
++----------------+------------------------+
+| time           | Executioner/eigenvalue |
++----------------+------------------------+
+|   0.000000e+00 |           1.160000e+00 |
+|   1.000000e+00 |           1.166417e+00 |
++----------------+------------------------+
+
+ Solution is rescaled with factor 6.68971e+22 for normalization!
+
+Outlier Variable Residual Norms:
+  group4: [33m7.166995e-11[39m
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+| time           | bnorm          | group1diff     | group1max      | group1norm     | group2diff     | group2max      | group2norm     | powernorm      | tot_fissions   |
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   1.160000e+00 |   4.115938e+00 |   0.000000e+00 |   6.585501e+02 |   4.115938e+00 |   0.000000e+00 |   6.585501e+02 |   1.486357e-11 |   4.662402e-01 |
+|   1.000000e+00 |   1.166417e+00 |   3.962932e+00 |   6.271043e-03 |   2.590152e+01 |   3.710171e+00 |   1.664382e-02 |   7.827499e+01 |   1.494834e-11 |   4.688498e-01 |
+|   2.000000e+00 |   7.802988e+22 |   2.078118e+22 |   4.195144e+20 |   1.732736e+24 |   6.173450e+22 |   1.113423e+21 |   5.236368e+24 |   1.000000e+12 |   3.136468e+22 |
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+
+
+Reporter Values:
++----------------+------------------------+
+| time           | Executioner/eigenvalue |
++----------------+------------------------+
+|   0.000000e+00 |           1.160000e+00 |
+|   1.000000e+00 |           1.166417e+00 |
+|   2.000000e+00 |           1.166417e+00 |
++----------------+------------------------+
+
+
+
+Performance Graph:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                Section                               | Calls |   Self(s)  |   Avg(s)   |    %   | Mem(MB) |  Total(s)  |   Avg(s)   |    %   | Mem(MB) |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| MoltresApp (main)                                                    |     1 |      0.267 |      0.267 |   0.40 |       3 |     66.319 |     66.319 | 100.00 |     119 |
+|   Action::SetupMeshAction::Mesh::SetupMeshAction::act::setup_mesh    |     1 |      0.072 |      0.072 |   0.11 |       0 |      0.072 |      0.072 |   0.11 |       0 |
+|   Action::SetupMeshAction::Mesh::SetupMeshAction::act::set_mesh_base |     2 |      0.006 |      0.003 |   0.01 |       0 |      0.006 |      0.003 |   0.01 |       0 |
+|   MooseApp::executeMeshGenerators                                    |     1 |      0.001 |      0.001 |   0.00 |       0 |      0.001 |      0.001 |   0.00 |       0 |
+|   FEProblem::computeUserObjects                                      |    11 |      0.982 |      0.089 |   1.48 |       0 |      0.982 |      0.089 |   1.48 |       0 |
+|   FEProblem::outputStep                                              |     3 |      0.004 |      0.001 |   0.01 |       0 |      1.020 |      0.340 |   1.54 |      15 |
+|     Exodus::outputStep                                               |     3 |      0.740 |      0.247 |   1.12 |      14 |      0.740 |      0.247 |   1.12 |      14 |
+|   FEProblem::solve                                                   |    13 |     22.748 |      1.750 |  34.30 |      49 |     55.517 |      4.271 |  83.71 |      54 |
+|     FEProblem::computeResidualInternal                               |    13 |      0.006 |      0.000 |   0.01 |       0 |      6.244 |      0.480 |   9.42 |       2 |
+|       FEProblem::computeUserObjects                                  |    13 |      1.303 |      0.100 |   1.96 |       0 |      1.303 |      0.100 |   1.96 |       0 |
+|     FEProblem::computeResidualInternal                               |    26 |      0.004 |      0.000 |   0.01 |       0 |     12.100 |      0.465 |  18.25 |       0 |
+|       FEProblem::computeUserObjects                                  |    26 |      2.596 |      0.100 |   3.91 |       0 |      2.596 |      0.100 |   3.91 |       0 |
+|     FEProblem::computeJacobianInternal                               |    13 |      0.002 |      0.000 |   0.00 |       0 |     13.168 |      1.013 |  19.86 |       3 |
+|   InversePowerMethod::final                                          |     1 |      0.000 |      0.000 |   0.00 |       0 |      0.002 |      0.002 |   0.00 |       0 |
+|     FEProblem::outputStep                                            |     1 |      0.000 |      0.000 |   0.00 |       0 |      0.002 |      0.002 |   0.00 |       0 |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Finished Executing                                                                       [[33m 58.45 s[39m] [[33m   71 MB[39m]
+Application 105145766 resources: utime ~1913s, stime ~171s, Rss ~145312, inblocks ~79293, outblocks ~155832

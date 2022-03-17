@@ -1,0 +1,2 @@
+time,bnorm,group1diff,group1max,group1norm,group2diff,group2max,group2norm,powernorm,tot_fissions,Executioner/eigenvalue
+0,1.2,4.2365649067181,0,677.85038507534,4.2365649067181,0,677.85038507534,1.5376104398696e-11,0.48231740822254,1.2
